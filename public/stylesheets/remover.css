@@ -1,0 +1,29 @@
+/* 
+  Site: Qualaroo - Remover
+*/
+
+/* These styles are used to remove certain elements from the page to simplify them for testing purposes */
+
+#top .nav,
+#middle .tweet h2,
+#middle .tweet p,
+#bottom .container ul.nav,
+#km {
+  display: none;
+}
+#middle {
+  background: none;
+  padding: 0;
+}
+#middle #middle_inner .center {
+  background: transparent url(../../images/welcome/sub_hr.png) 0 0 repeat-x;
+  display: block;
+  padding: 10px 0 0 0;
+}
+#middle #middle_inner {
+  background-color: transparent;
+  background-image: none;
+}
+#bottom {
+  background-image: none;
+}
