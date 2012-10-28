@@ -3,11 +3,9 @@ function ajax_load(){
       url: '/welcome/load_url',
       data: "info=" + $("#webaddress_list").html()
     }).done(function(){
-      console.log("Data loaded...");
     });
 }
 $(document).ready(function() {
-  alert("working..................");
   $(".url").keypress(function(e){
     var keycode = (e.keyCode ? e.keyCode : e.which);
     if(keycode == 13) {
