@@ -65,7 +65,9 @@
         </h2>
       </div>
       <div id="webaddress_list" class="col new_features">
-
+        <% @url_info.each do |url| %>
+          <%= url.url.to_s + "<br/>" %>
+        <% end %>
       </div>
 
     </div>

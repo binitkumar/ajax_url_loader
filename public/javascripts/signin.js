@@ -11,11 +11,23 @@ $(document).ready(function() {
     if(keycode == 13) {
         url_exp = /^(http|https?:\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)$/
         current_url = $("#url").val() ;
+        console.log(current_url);
+        if(current_url.indexOf('www.')== -1 && current_url.indexOf('http://')== -1 ){
+            current_url = 'www.' + current_url;
+            console.log("Added www");
+            console.log(current_url);
+
+        }
+        if(current_url.indexOf('http://') == -1){
+            current_url = 'http://' + current_url ;
+            console.log("Added http");
+            console.log(current_url);
+        }
         url_framgment = current_url.split('/');
         updated_url = url_framgment[2];
         already_added = false
         url_list = $("#webaddress_list").html();
-        if( current_url.match(url_exp)  ){
+        if( current_url.match(url_exp) && current_url.match( /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/ )  ){
             if ( url_list != ''){
               url_array = url_list.split("<br/>")
               var i;

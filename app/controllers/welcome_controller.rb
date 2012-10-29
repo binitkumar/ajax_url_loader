@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def signin
+    @url_info = UrlInfo.find(:all)
   end
 
   def load_url
